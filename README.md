@@ -7,3 +7,20 @@ This source sets the cr0 register (control register) and changes the write-copy 
 2) This all has to occur on the same core
 
 Patching the shared memory for these system modules opens a plethora of opportunities, such as bypassing DRM solutions that run in kernel-mode and have various types of memory integrity protection schemes implemented. This allows for the process the DRM solution is protecting to execute arbitrary code injected by the user.
+
+
+```C
+void SetWriteProtection(BOOLEAN Protection)
+```
+
+**SetWriteProtection** sets the copy-on-write protection bit of cr0
+
+```C
+SetWriteProtection(WP_ON)
+```
+Sets the copy-on-write protection bit so the protection is enabled
+
+```C
+SetWriteProtection(WP_OFF)
+```
+Disables copy-on-write protection
