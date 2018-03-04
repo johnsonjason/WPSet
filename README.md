@@ -1,4 +1,4 @@
-# crb00m
+# WPSet
 
 This source sets the cr0 register (control register) and changes the write-copy protection bit and disables it temporarily. The reason for doing this is because:
 
